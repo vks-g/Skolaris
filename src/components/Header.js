@@ -31,7 +31,7 @@ const Header = () => {
         {/* Profile Picture (always visible) */}
         <div className="flex items-center">
           <Link href="/profile" className="ml-4">
-            <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden border-2 border-blue-400 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden border-2 border-black flex items-center justify-center">
               <div className="relative w-full h-full">
                 <Image
                   src="/images/profile.png"

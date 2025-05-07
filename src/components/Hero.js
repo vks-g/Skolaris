@@ -13,13 +13,13 @@ const Hero = () => {
         <div className="flex justify-center space-x-4">
           <Link
             href="/signup"
-            className="bg-blue-600 hover:bg-black text-white font-semibold py-2 px-4 rounded"
+            className="bg-black hover:bg-white hover:text-black hover:border border-black text-white  py-2 px-4 rounded"
           >
             Get Started
           </Link>
           <Link
             href="/login"
-            className="bg-transparent border border-black hover:bg-black hover:text-white text-black font-semibold py-2 px-4 rounded"
+            className="bg-transparent border border-black hover:bg-black hover:text-white text-black  py-2 px-4 rounded"
           >
             Login
           </Link>
