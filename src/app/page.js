@@ -1,19 +1,26 @@
-"use client";
-import Hero from '../components/Hero';
-import Features from '../components/BrowseCategories';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from 'react';
+import Hero from '../components/Hero.js';
+import ContinueLearning from '../components/ContinueLearning';
+import BrowseCategories from '../components/BrowseCategories';
+import FeaturedCourses from '../components/FeaturedCourses';
+import Feature from '../components/Feature';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+
+
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-      </main>
-      <Footer />
+    <Header/>
+    <main>
+      <Hero />
+      <ContinueLearning />
+      <BrowseCategories />
+      <FeaturedCourses />
+      <Feature />
+    </main>
+    <Footer/>
     </>
   );
 }
-

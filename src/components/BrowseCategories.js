@@ -1,39 +1,82 @@
-const features = [
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const BrowseCategories = () => {
+  const categories = [
     {
-      title: 'Collaborative Projects',
-      description: 'Work together seamlessly with team members across the globe.',
+      id: 1,
+      title: 'Design',
+      icon: '/icons/design.svg',
+      courses: '25+ Courses',
+      
     },
     {
-      title: 'Knowledge Sharing',
-      description: 'Share insights and learn from the community.',
+      id: 2,
+      title: 'Development',
+      icon: '/icons/development.svg',
+      courses: '40+ Courses'
     },
     {
-      title: 'Skill Development',
-      description: 'Enhance your skills through real-world projects.',
+      id: 3,
+      title: 'Marketing',
+      icon: '/icons/marketing.svg',
+      courses: '18+ Courses'
+    },
+    {
+      id: 4,
+      title: 'Business',
+      icon: '/icons/business.svg',
+      courses: '30+ Courses'
+    },
+    {
+      id: 5,
+      title: 'Photography',
+      icon: '/icons/photography.svg',
+      courses: '15+ Courses'
+    },
+    {
+      id: 6,
+      title: 'Music',
+      icon: '/icons/music.svg',
+      courses: '20+ Courses',
+      
     },
   ];
-  
-  const Features = () => {
-    return (
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
-            Features
-          </h2>
-          <div className="flex flex-wrap -mx-4">
-            {features.map((feature, index) => (
-              <div key={index} className="w-full md:w-1/3 px-4 mb-8">
-                <div className="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition duration-300">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-700">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl text-black font-bold mb-4">Browse Top Categories</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Explore our wide range of courses across different categories to find what interests you the most.
+          </p>
         </div>
-      </section>
-    );
-  };
-  
-  export default Features;
-  
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {categories.map((category) => (
+            <Link href={`/category/${category.title.toLowerCase()}`} key={category.id}>
+              <div className='bg-black rounded-lg p-6 text-center transition-transform hover:scale-105 cursor-pointer'>
+                {/* <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 relative">
+                    <Image
+                      src={category.icon}
+                      alt={category.title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div> */}
+                <h3 className="font-semibold text-white text-lg mb-1">{category.title}</h3>
+                <p className="text-white text-sm">{category.courses}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BrowseCategories;
