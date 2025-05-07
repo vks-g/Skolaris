@@ -1,7 +1,7 @@
-import '../globals.css';
+import './globals.css';
 
 export const metadata = {
-  title: 'Gray Matter Guild',
+  title: 'Skolaris',
   description: 'Collaborate, Innovate, and Grow Together',
 };
 
